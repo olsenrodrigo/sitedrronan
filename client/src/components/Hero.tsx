@@ -1,0 +1,118 @@
+import { motion } from "framer-motion";
+import { Calendar, ArrowRight, User } from "lucide-react";
+
+interface HeroProps {
+  scrollToSection?: (section: string) => void;
+}
+
+export default function Hero({ scrollToSection }: HeroProps) {
+  const goTo = (id: string) => {
+    if (scrollToSection) {
+      scrollToSection(id);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  return (
+    <div id="hero" className="relative min-h-screen flex items-center">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div
+          className="w-full h-full"
+          style={{
+            background: "linear-gradient(135deg, #0D1B2A 0%, #1A2B4A 40%, #1E4D6B 100%)"
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to right, rgba(13, 27, 42, 0.97), rgba(26, 43, 74, 0.75), rgba(26, 43, 74, 0.25))" }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 pt-32 sm:pt-36">
+        <div className="max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div
+              className="inline-block px-4 py-2 backdrop-blur-sm border rounded-full mb-6"
+              style={{ backgroundColor: "rgba(42, 143, 168, 0.2)", borderColor: "rgba(42, 143, 168, 0.4)" }}
+            >
+              <span className="text-sm font-medium" style={{ color: "#A8D8E8" }}>
+                Neurologia · Neuropediatria · AVC
+              </span>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Cuidado neurológico de{" "}
+              <span style={{ color: "#C8963C" }}>
+                excelência internacional
+              </span>
+            </h2>
+
+            <p className="text-lg mb-4 leading-relaxed" style={{ color: "#A8D8E8" }}>
+              Dr. Ronan Vieira — Neurologista e Neuropediatra | CRM-SP 161754
+            </p>
+
+            <p className="text-base mb-8 leading-relaxed" style={{ color: "rgba(168, 216, 232, 0.85)" }}>
+              Formado pela USP, com residência na UNICAMP e dois fellowships internacionais em
+              AVC nos maiores centros do mundo em Toronto (SickKids + Toronto Western Hospital).
+              Atende crianças e adultos com a técnica mais atualizada e um cuidado verdadeiramente humano.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => goTo("contact")}
+                className="group px-8 py-4 text-white rounded-full font-medium flex items-center justify-center gap-2 hover:shadow-xl transition-all cursor-pointer"
+                style={{ background: "linear-gradient(135deg, #C8963C 0%, #E0A84A 100%)" }}
+              >
+                <Calendar size={20} />
+                Agendar Consulta
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => goTo("about")}
+                className="px-8 py-4 backdrop-blur-sm text-white rounded-full font-medium border-2 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.25)" }}
+              >
+                <User size={20} />
+                Conheça o Especialista
+              </motion.button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid grid-cols-3 gap-3 sm:gap-6 mt-8 sm:mt-16 pt-6 sm:pt-10 border-t"
+            style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
+          >
+            {[
+              { value: "USP + UNICAMP", label: "Formação de Elite" },
+              { value: "Toronto", label: "Fellowship Internacional" },
+              { value: "0 a 99 anos", label: "Neurologia para todas as idades" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-lg md:text-xl font-bold mb-1" style={{ color: "#C8963C" }}>{stat.value}</div>
+                <div className="text-xs sm:text-sm" style={{ color: "#A8D8E8" }}>{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      <div
+        className="absolute bottom-0 left-0 right-0 h-32 z-10"
+        style={{ background: "linear-gradient(to top, #FFFFFF, transparent)" }}
+      />
+    </div>
+  );
+}
