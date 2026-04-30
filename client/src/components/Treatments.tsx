@@ -36,13 +36,12 @@ export default function Treatments() {
             <span className="text-sm font-medium" style={{ color: "#2A8FA8" }}>Abordagem Clínica</span>
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
-            Como o Dr. Ronan atua
-          </h3>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
+            Está com sintomas neurológicos e ainda sem diagnóstico claro?
+          </h2>
 
           <p className="text-lg max-w-4xl mx-auto" style={{ color: "#3C3C3C" }}>
-            Cada caso é único. A abordagem combina diagnóstico preciso baseado em evidências
-            internacionais com o cuidado humanizado que cada paciente merece.
+            Cada sintoma neurológico precisa ser interpretado com precisão. Diagnóstico precoce melhora o prognóstico em doenças neurológicas.
           </p>
         </motion.div>
 
@@ -75,9 +74,7 @@ export default function Treatments() {
         >
           <AlertCircle className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: "#2A8FA8" }} />
           <p className="text-base" style={{ color: "#3C3C3C" }}>
-            A conduta clínica é sempre definida após avaliação criteriosa e completa. O Dr. Ronan
-            acredita na tomada de decisão compartilhada — você entende o diagnóstico, as opções
-            disponíveis e participa ativamente das decisões sobre o seu tratamento.
+            Sintomas neurológicos ignorados podem evoluir. A conduta clínica é sempre definida após avaliação criteriosa e completa — você entende o diagnóstico, as opções disponíveis e participa ativamente das decisões sobre o seu tratamento.
           </p>
         </motion.div>
       </div>

@@ -45,9 +45,9 @@ export default function Contact() {
             <span className="text-sm font-medium" style={{ color: "#1A2B4A" }}>Entre em Contato</span>
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
-            Agende sua Consulta
-          </h3>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
+            Agende consulta com neurologista em São Paulo
+          </h2>
 
           <p className="text-xl max-w-3xl mx-auto" style={{ color: "#3C3C3C" }}>
             Atendimento particular. Preencha o formulário ou entre em contato pelo WhatsApp
@@ -173,7 +173,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2" style={{ color: "#212529" }}>Mensagem</label>
+                    <label className="block text-sm font-medium mb-2" style={{ color: "#212529" }}>Motivo da consulta</label>
                     <textarea
                       required
                       rows={4}
@@ -181,7 +181,7 @@ export default function Contact() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:border-transparent transition-all resize-none outline-none"
                       style={{ borderColor: "rgba(91, 140, 155, 0.3)" }}
-                      placeholder="Como podemos ajuda-lo(a)?"
+                      placeholder="Descreva o motivo da consulta..."
                     />
                   </div>
 
@@ -200,7 +200,7 @@ export default function Contact() {
                     {status === "loading" ? (
                       <><Loader2 className="w-5 h-5 animate-spin" /> Enviando...</>
                     ) : (
-                      <>Enviar Mensagem <Send size={20} /></>
+                      <>Quero agendar minha consulta <Send size={20} /></>
                     )}
                   </motion.button>
                 </form>

@@ -45,21 +45,19 @@ export default function Hero({ scrollToSection }: HeroProps) {
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Cuidado neurológico de{" "}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Neurologista em São Paulo |{" "}
               <span style={{ color: "#C8963C" }}>
-                excelência internacional
+                Neuropediatria e AVC em adultos jovens e crianças
               </span>
-            </h2>
+            </h1>
 
             <p className="text-lg mb-4 leading-relaxed" style={{ color: "#A8D8E8" }}>
-              Dr. Ronan Vieira — Neurologista e Neuropediatra | CRM-SP 161754
+              Diagnóstico neurológico preciso com base em evidência científica, observação clínica e experiência internacional
             </p>
 
             <p className="text-base mb-8 leading-relaxed" style={{ color: "rgba(168, 216, 232, 0.85)" }}>
-              Formado pela USP, com residência na UNICAMP e dois fellowships internacionais em
-              AVC nos maiores centros do mundo em Toronto (SickKids + Toronto Western Hospital).
-              Atende crianças e adultos com a técnica mais atualizada e um cuidado verdadeiramente humano.
+              Atendimento especializado em <strong>neurologia e neuropediatria em São Paulo</strong>, com foco em <strong>AVC (derrame), atraso de fala, autismo, TDAH e cefaleia</strong>. Consulta completa, com avaliação individualizada.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -106,6 +104,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
               </div>
             ))}
           </motion.div>
+
         </div>
       </div>
 

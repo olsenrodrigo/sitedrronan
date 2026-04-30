@@ -14,15 +14,15 @@ export default function Locations() {
   const features = [
     {
       icon: Shield,
-      text: "EMNH Instituto de Medicina — ambiente multidisciplinar acolhedor, com 55 especialistas e 32 especialidades",
+      text: "Consultório em São Paulo — Barra Funda e Higienópolis",
     },
     {
       icon: Clock,
-      text: "Consultas de 45 a 60 minutos — tempo real dedicado a você, sem pressa",
+      text: "Teleconsulta disponível para todo o Brasil",
     },
     {
       icon: Users,
-      text: "Agendamento pelo WhatsApp (11) 99605-8392 ou telefone (11) 3615-2474",
+      text: "Avaliação individualizada e acompanhamento próximo",
     },
   ];
 
@@ -39,13 +39,12 @@ export default function Locations() {
             <span className="text-sm font-medium" style={{ color: "#1A2B4A" }}>Consultório</span>
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
-            Onde atende o Dr. Ronan
-          </h3>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
+            Neurologista em São Paulo, atendimento presencial e telemedicina
+          </h2>
 
           <p className="text-xl max-w-3xl mx-auto" style={{ color: "#3C3C3C" }}>
-            Atendimento no EMNH Instituto de Medicina — referência em São Paulo.
-            Também disponível por teleconsulta para todo o Brasil.
+            Consultórios em São Paulo e teleconsulta disponível para todo o Brasil.
           </p>
         </motion.div>
 
@@ -84,7 +83,7 @@ export default function Locations() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "#2A8FA8" }} />
                 <div>
-                  <p className="font-bold" style={{ color: "#212529" }}>Consultório Principal</p>
+                  <p className="font-bold" style={{ color: "#212529" }}>Barra Funda — Instituto Emunah</p>
                   <p style={{ color: "#3C3C3C" }}>
                     Av. Marquês de São Vicente, 2219 — Conj. 316<br />
                     Jardim das Perdizes — São Paulo/SP<br />
@@ -95,7 +94,7 @@ export default function Locations() {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "#2A8FA8" }} />
                 <div>
-                  <p className="font-bold" style={{ color: "#212529" }}>Segunda Localização</p>
+                  <p className="font-bold" style={{ color: "#212529" }}>Higienópolis — Clínica Levy</p>
                   <p style={{ color: "#3C3C3C" }}>
                     Av. Angélica, 688 — 13º andar<br />
                     São Paulo/SP

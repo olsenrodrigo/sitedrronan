@@ -12,19 +12,19 @@ import { Star, Quote } from "lucide-react";
 export default function FAQ() {
   const testimonials = [
     {
-      text: "Literalmente impecável. O Dr. Ronan foi extremamente cuidadoso com minha filha, explicou tudo com detalhes e demonstrou empatia em cada momento. Um médico que realmente se importa com o paciente.",
-      name: "Mãe de paciente pediátrica",
-      detail: "Neuropediatria — São Paulo",
+      text: "Bom dia, Dr. Ronan! Que você tenha uma semana abençoada e produtiva. Continue fazendo a diferença na vida de cada paciente e famílias, Vc é querido e nem sabe! Deus abençoe",
+      name: "Paciente",
+      detail: "Neurologia — São Paulo",
     },
     {
-      text: "Tão empático e cuidadoso que você percebe que ele realmente se importa. Explicou o diagnóstico de forma clara, respondeu todas as minhas dúvidas e me deixou tranquilo sobre o tratamento. Recomendo muito.",
-      name: "Paciente adulto",
+      text: "Gostaria de lhe informar que sua paciente (caso de Guillain Barre, no Sabará em julho/2025) está bem recuperada, com mobilidade e força em praticamente 100%... Recentemente em consulta de rotina, os reflexos neurológicos estavam todos de volta… Muito obrigada por seu diagnóstico preciso, mesmo em uma situação de uma síndrome com parâmetros não muito claros… Desejamos Saúde e paz a você, com muita dedicação e sucesso na jornada profissional! Um grande abraço!",
+      name: "Familiar de paciente",
+      detail: "Neurologia — Hospital Sabará",
+    },
+    {
+      text: "Minha sogra sofreu um AVC cerebelar e, infelizmente, fomos surpreendidos por uma conduta médica inicial completamente equivocada, profissionais inexperientes, sem supervisão adequada, liberando paciente grave sem tomografia, aumentando o risco de vida dela. Foi quando o Dr. Ronan entrou no caso. Ele identificou o AVC, corrigiu imediatamente a conduta e nos orientou com clareza sobre o que fazer nas primeiras 24/48 horas, período crítico que poderia definir entre sequelas, um novo AVC ou até óbito. Graças a ele, tivemos acesso a um cuidado sério, técnico e humano. Um médico que assume responsabilidade, tem firmeza, empatia e uma competência rara. Mudou o rumo da história da nossa família. Eternamente gratos.",
+      name: "Noemi Vidal",
       detail: "Neurologia Vascular — São Paulo",
-    },
-    {
-      text: "Fez um diagnóstico preciso em uma situação extremamente delicada envolvendo meu filho. Sua humanidade e excelência técnica fizeram toda a diferença no momento mais difícil que passamos.",
-      name: "Responsável por paciente",
-      detail: "Neuropediatria — EMNH Instituto",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function FAQ() {
           </h3>
 
           <p className="text-lg max-w-3xl mx-auto" style={{ color: "#3C3C3C" }}>
-            Histórias reais de quem confiou o cuidado neurológico ao Dr. Ronan Vieira.
+            Experiências reais de quem passou pela consulta.
           </p>
         </motion.div>
 

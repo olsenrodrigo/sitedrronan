@@ -27,32 +27,39 @@ export default function About() {
               <span className="text-sm font-medium" style={{ color: "#1E4D6B" }}>Sobre o Especialista</span>
             </div>
 
-            <h3 className="text-4xl md:text-5xl font-bold mb-2" style={{ color: "#212529" }}>
-              Dr. Ronan Vieira
-            </h3>
+            <h2 className="text-4xl md:text-5xl font-bold mb-2" style={{ color: "#212529" }}>
+              Neurologista e Neuropediatra com formação pela USP e especialização internacional
+            </h2>
 
             <p className="text-lg mb-6 font-medium" style={{ color: "#2A8FA8" }}>
-              Neurologista · Neuropediatra · Especialista em AVC
+              Referência em neurologia vascular e diagnóstico de condições complexas
             </p>
 
             <p className="text-lg mb-4 leading-relaxed" style={{ color: "#3C3C3C" }}>
-              <strong>Dr. Ronan José Vieira Neto</strong> é neurologista e neuropediatra formado pela
-              <strong> Universidade de São Paulo (USP)</strong>, com residência médica em Neurologia
-              pela <strong>UNICAMP</strong> — um dos programas mais rigorosos do Brasil.
+              Neurologista e neuropediatra em São Paulo, formado pela <strong>USP</strong>, com residência pela
+              <strong> UNICAMP</strong> e especialização internacional em AVC (acidente vascular cerebral)
+              infantil e adulto pela <strong>Universidade de Toronto</strong> (SickKids e Toronto Western Hospital).
             </p>
 
             <p className="text-lg mb-4 leading-relaxed" style={{ color: "#3C3C3C" }}>
-              Sua trajetória o levou a dois dos maiores centros mundiais em AVC: realizou fellowship em
-              <strong> AVC na infância e adolescência no Hospital for Sick Children (SickKids)</strong> e
-              em <strong>AVC adulto no Toronto Western Hospital</strong> — ambos vinculados à
-              Universidade de Toronto, Canadá. Uma formação internacional rara entre neurologistas brasileiros.
+              Atua no diagnóstico e tratamento de doenças neurológicas em todas as idades, com
+              foco em <strong>AVC em jovens, atraso de fala, autismo, cefaleia</strong> e distúrbios neurológicos complexos.
             </p>
+
+            <p className="text-lg mb-4 leading-relaxed" style={{ color: "#3C3C3C" }}>
+              Seu diferencial está na combinação de:
+            </p>
+            <ul className="mb-6 space-y-2 pl-4">
+              {["Medicina baseada em evidências", "Observação clínica detalhada", "Atendimento individualizado"].map((item, i) => (
+                <li key={i} className="flex items-center gap-2 text-base" style={{ color: "#3C3C3C" }}>
+                  <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#2A8FA8" }} />
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             <p className="text-lg mb-8 leading-relaxed" style={{ color: "#3C3C3C" }}>
-              Com consultas de <strong>45 a 60 minutos</strong>, o Dr. Ronan oferece um atendimento que
-              prioriza entender completamente o paciente, explicar o diagnóstico com clareza e tomar
-              decisões compartilhadas. Atende <strong>crianças, adolescentes e adultos</strong>,
-              presencialmente e por teleconsulta.
+              Consultas com tempo adequado permitem uma avaliação profunda, essencial para casos que não tiveram <strong>diagnóstico claro anteriormente</strong>.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 mt-8">
@@ -93,25 +100,6 @@ export default function About() {
             <div className="absolute -top-6 -left-6 w-40 h-40 rounded-full -z-10" style={{ backgroundColor: "rgba(42, 143, 168, 0.1)" }} />
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 pt-16 border-t"
-          style={{ borderColor: "rgba(42, 143, 168, 0.2)" }}
-        >
-          {[
-            { value: "USP + UNICAMP + Toronto", label: "Trajetória acadêmica de elite em 3 países" },
-            { value: "0 a 99 anos", label: "Neurologia adulta e pediátrica em um único especialista" },
-            { value: "45–60 min", label: "Consultas completas, sem pressa, com diagnóstico preciso" },
-          ].map((item, index) => (
-            <div key={index} className="text-center">
-              <div className="text-xl md:text-2xl font-bold mb-2" style={{ color: "#1A2B4A" }}>{item.value}</div>
-              <div className="text-base" style={{ color: "#3C3C3C" }}>{item.label}</div>
-            </div>
-          ))}
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

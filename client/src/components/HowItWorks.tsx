@@ -1,39 +1,31 @@
 import { motion } from "framer-motion";
-import { BookOpen } from "lucide-react";
-
-/*
- * WHITELABEL: Personalizar
- * - Titulo e descricao da secao
- * - Topicos de conteudo educativo (titulo + descricao)
- * - Quantidade de cards
- * - Cores: #2A8FA8 (primary), #2C3E50 (secondary), #E8F1F6 (muted)
- */
+import { HelpCircle } from "lucide-react";
 
 export default function HowItWorks() {
   const topics = [
     {
-      title: "O que é AVC e como reconhecer?",
-      description: "AVC (Acidente Vascular Cerebral) ocorre quando o fluxo de sangue ao cérebro é interrompido. Reconheça com o método FAST: Fraqueza facial, Alteração de braço, Sintoma de fala e Tempo — ligue 192 imediatamente.",
+      title: "Meu filho não fala, devo me preocupar?",
+      description: "Atraso de fala pode indicar necessidade de avaliação neurológica. Uma consulta especializada ajuda a identificar a causa e traçar o melhor caminho para o desenvolvimento da criança.",
     },
     {
-      title: "AVC pode acontecer em crianças?",
-      description: "Sim. AVC pediátrico é raro, mas real — e frequentemente subdiagnosticado. O Dr. Ronan é especialista nesse tema, com fellowship específico no SickKids Toronto, maior referência mundial em AVC infantil.",
+      title: "Dor de cabeça frequente é normal?",
+      description: "Cefaleias recorrentes precisam de investigação. Enxaqueca é uma condição neurológica crônica com tratamentos eficazes — mas o diagnóstico correto exige avaliação especializada.",
     },
     {
-      title: "TDAH: quando buscar avaliação?",
-      description: "Dificuldade de concentração, impulsividade e hiperatividade persistentes que afetam o desempenho escolar ou social são sinais de alerta. O diagnóstico correto exige avaliação neurológica especializada — não apenas questionários.",
+      title: "Quais são os sinais de AVC?",
+      description: "Fraqueza, fala alterada, tontura e visão turva são sinais de alerta. Use o método FAST: Fraqueza facial, Alteração de braço, Sintoma de fala e Tempo — ligue 192 imediatamente.",
     },
     {
-      title: "Enxaqueca ou dor de cabeça comum?",
-      description: "Enxaqueca é uma condição neurológica crônica, não apenas 'dor de cabeça forte'. Tem tratamentos eficazes quando corretamente diagnosticada. Se a dor impede atividades ou se repete, procure um neurologista.",
+      title: "AVC pode acontecer em jovens?",
+      description: "Sim, e muitas vezes é subdiagnosticado. AVC em adultos jovens e crianças tem causas específicas que exigem investigação especializada e acompanhamento adequado.",
     },
     {
-      title: "O que esperar de uma consulta com o Dr. Ronan?",
-      description: "Consultas de 45-60 minutos, com anamnese completa, exame neurológico detalhado e explicação clara do diagnóstico e plano terapêutico. Você sai entendendo o que tem e o que será feito. Sem pressa.",
+      title: "Quando procurar um neurologista para o meu filho?",
+      description: "Suspeita de autismo, TDAH, convulsões, dificuldade de aprendizagem ou atraso no desenvolvimento são indicações claras para avaliação neuropediátrica.",
     },
     {
       title: "Como funciona a teleconsulta?",
-      description: "Consulta por videochamada com toda a atenção e qualidade do atendimento presencial. Para pacientes fora de São Paulo ou com dificuldade de deslocamento. Quando indicado, retorno presencial em até 30 dias, sem custo adicional.",
+      description: "Consulta por videochamada com toda a atenção e qualidade do atendimento presencial. Disponível para todo o Brasil. Quando indicado, retorno presencial em São Paulo sem custo adicional.",
     },
   ];
 
@@ -47,15 +39,15 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <div className="inline-block px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "#E8F1F6" }}>
-            <span className="text-sm font-medium" style={{ color: "#2A8FA8" }}>Conteudo Educativo</span>
+            <span className="text-sm font-medium" style={{ color: "#2A8FA8" }}>Orientação Especializada</span>
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
-            Neurologia que você entende
-          </h3>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
+            Quando procurar um neurologista?
+          </h2>
 
           <p className="text-lg max-w-3xl mx-auto" style={{ color: "#3C3C3C" }}>
-            Informação acessível sobre condições neurológicas — porque entender o que acontece no seu cérebro é parte do tratamento.
+            Dúvidas comuns de pacientes e famílias — porque entender os sinais neurológicos é o primeiro passo para o cuidado certo.
           </p>
         </motion.div>
 
@@ -74,12 +66,12 @@ export default function HowItWorks() {
               <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
                 style={{ backgroundColor: "#E8F1F6" }}
               >
-                <BookOpen className="w-5 h-5" style={{ color: "#2A8FA8" }} />
+                <HelpCircle className="w-5 h-5" style={{ color: "#2A8FA8" }} />
               </div>
 
-              <h4 className="text-lg font-bold mb-3" style={{ color: "#212529" }}>
+              <h3 className="text-lg font-bold mb-3" style={{ color: "#212529" }}>
                 {topic.title}
-              </h4>
+              </h3>
 
               <p className="text-sm leading-relaxed" style={{ color: "#3C3C3C" }}>
                 {topic.description}
