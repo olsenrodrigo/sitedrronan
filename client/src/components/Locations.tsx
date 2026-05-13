@@ -27,19 +27,19 @@ export default function Locations() {
   ];
 
   return (
-    <section id="locations" className="py-24 bg-white">
+    <section id="locations" className="py-14 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <div className="inline-block px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "rgba(42, 143, 168, 0.15)" }}>
             <span className="text-sm font-medium" style={{ color: "#1A2B4A" }}>Consultório</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#212529" }}>
             Neurologista em São Paulo, atendimento presencial e telemedicina
           </h2>
 

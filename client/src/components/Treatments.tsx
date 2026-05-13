@@ -24,19 +24,19 @@ export default function Treatments() {
   ];
 
   return (
-    <section id="treatments" className="py-24 bg-white">
+    <section id="treatments" className="py-14 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <div className="inline-block px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "#E8F1F6" }}>
             <span className="text-sm font-medium" style={{ color: "#2A8FA8" }}>Abordagem Clínica</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#212529" }}>
             Está com sintomas neurológicos e ainda sem diagnóstico claro?
           </h2>
 
@@ -45,7 +45,7 @@ export default function Treatments() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
           {treatments.map((item, index) => (
             <motion.div
               key={index}

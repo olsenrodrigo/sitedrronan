@@ -15,7 +15,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
   };
 
   return (
-    <div id="hero" className="relative min-h-screen flex items-center">
+    <div id="hero" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div
           className="w-full h-full"
@@ -29,58 +29,49 @@ export default function Hero({ scrollToSection }: HeroProps) {
         />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 pt-32 sm:pt-36">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div
-              className="inline-block px-4 py-2 backdrop-blur-sm border rounded-full mb-6"
-              style={{ backgroundColor: "rgba(42, 143, 168, 0.2)", borderColor: "rgba(42, 143, 168, 0.4)" }}
-            >
-              <span className="text-sm font-medium" style={{ color: "#A8D8E8" }}>
-                Neurologia · Neuropediatria · AVC
-              </span>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
               Neurologista em São Paulo |{" "}
               <span style={{ color: "#C8963C" }}>
                 Neuropediatria e AVC em adultos jovens e crianças
               </span>
             </h1>
 
-            <p className="text-lg mb-4 leading-relaxed" style={{ color: "#A8D8E8" }}>
+            <p className="text-lg mb-3 leading-snug" style={{ color: "#A8D8E8" }}>
               Diagnóstico neurológico preciso com base em evidência científica, observação clínica e experiência internacional
             </p>
 
-            <p className="text-base mb-8 leading-relaxed" style={{ color: "rgba(168, 216, 232, 0.85)" }}>
+            <p className="text-base mb-5 leading-relaxed" style={{ color: "rgba(168, 216, 232, 0.85)" }}>
               Atendimento especializado em <strong>neurologia e neuropediatria em São Paulo</strong>, com foco em <strong>AVC (derrame), atraso de fala, autismo, TDAH e cefaleia</strong>. Consulta completa, com avaliação individualizada.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => goTo("contact")}
-                className="group px-8 py-4 text-white rounded-full font-medium flex items-center justify-center gap-2 hover:shadow-xl transition-all cursor-pointer"
+                className="group px-6 py-3 text-white rounded-full font-medium flex items-center justify-center gap-2 hover:shadow-xl transition-all cursor-pointer"
                 style={{ background: "linear-gradient(135deg, #C8963C 0%, #E0A84A 100%)" }}
               >
-                <Calendar size={20} />
+                <Calendar size={18} />
                 Agendar Consulta
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => goTo("about")}
-                className="px-8 py-4 backdrop-blur-sm text-white rounded-full font-medium border-2 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="px-6 py-3 backdrop-blur-sm text-white rounded-full font-medium border-2 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.25)" }}
               >
-                <User size={20} />
+                <User size={18} />
                 Conheça o Especialista
               </motion.button>
             </div>
@@ -90,7 +81,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-3 gap-3 sm:gap-6 mt-8 sm:mt-16 pt-6 sm:pt-10 border-t"
+            className="grid grid-cols-3 gap-2 sm:gap-4 mt-6 pt-5 border-t"
             style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
           >
             {[
@@ -100,7 +91,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-lg md:text-xl font-bold mb-1" style={{ color: "#C8963C" }}>{stat.value}</div>
-                <div className="text-xs sm:text-sm" style={{ color: "#A8D8E8" }}>{stat.label}</div>
+                <div className="text-sm" style={{ color: "#A8D8E8" }}>{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -108,10 +99,6 @@ export default function Hero({ scrollToSection }: HeroProps) {
         </div>
       </div>
 
-      <div
-        className="absolute bottom-0 left-0 right-0 h-32 z-10"
-        style={{ background: "linear-gradient(to top, #FFFFFF, transparent)" }}
-      />
     </div>
   );
 }

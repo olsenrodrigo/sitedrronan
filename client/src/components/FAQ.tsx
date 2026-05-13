@@ -29,19 +29,19 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24" style={{ backgroundColor: "#F0F6FA" }}>
+    <section id="faq" className="py-14" style={{ backgroundColor: "#F0F6FA" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <div className="inline-block px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "rgba(91, 140, 155, 0.15)" }}>
             <span className="text-sm font-medium" style={{ color: "#1A2B4A" }}>Depoimentos</span>
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#212529" }}>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#212529" }}>
             O que dizem os pacientes
           </h3>
 
@@ -86,7 +86,7 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20 rounded-3xl p-12 text-center text-white"
+          className="mt-10 rounded-3xl p-10 text-center text-white"
           style={{ background: "linear-gradient(135deg, #1A2B4A 0%, #1E4D6B 50%, #2A8FA8 100%)" }}
         >
           <h4 className="text-2xl md:text-3xl font-bold mb-4 text-white">

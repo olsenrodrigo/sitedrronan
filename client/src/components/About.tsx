@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Briefcase, IdCard, Building2, Globe, Star } from "lucide-react";
+import drRonanPhoto from "../assets/images/dr-ronan.jpg";
 
 export default function About() {
   const credentials = [
@@ -14,9 +15,9 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-14 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -27,7 +28,7 @@ export default function About() {
               <span className="text-sm font-medium" style={{ color: "#1E4D6B" }}>Sobre o Especialista</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-2" style={{ color: "#212529" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: "#212529" }}>
               Neurologista e Neuropediatra com formação pela USP e especialização internacional
             </h2>
 
@@ -91,7 +92,7 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-sm">
               <img
-                src="https://neuroronan.com/dr/wp-content/uploads/2022/01/Foto-Dr-Ronan.jpeg"
+                src={drRonanPhoto}
                 alt="Dr. Ronan José Vieira Neto — Neurologista e Neuropediatra"
                 className="w-full h-[550px] object-cover object-top"
               />
@@ -105,9 +106,9 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-10 text-center"
         >
-          <blockquote className="text-3xl md:text-4xl font-bold italic max-w-3xl mx-auto mb-8" style={{ color: "#1A2B4A" }}>
+          <blockquote className="text-2xl md:text-3xl font-bold italic max-w-3xl mx-auto mb-6" style={{ color: "#1A2B4A" }}>
             "Cada cérebro é único. Cada paciente merece um diagnóstico à altura dessa complexidade."
           </blockquote>
           <motion.button

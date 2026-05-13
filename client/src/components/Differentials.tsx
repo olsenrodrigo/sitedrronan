@@ -43,20 +43,20 @@ export default function Differentials() {
   ];
 
   return (
-    <section id="differentials" className="py-24" style={{ backgroundColor: "#F0F6FA" }}>
+    <section id="differentials" className="py-14" style={{ backgroundColor: "#F0F6FA" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
             <div className="inline-block px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "rgba(42, 143, 168, 0.15)" }}>
               <span className="text-sm font-medium" style={{ color: "#1A2B4A" }}>Benefícios</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#212529" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#212529" }}>
               Por que escolher um neurologista especialista?
             </h2>
 

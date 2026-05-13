@@ -23,19 +23,19 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-24" style={{ backgroundColor: "#F0F6FA" }}>
+    <section id="services" className="py-14" style={{ backgroundColor: "#F0F6FA" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <div className="inline-block px-4 py-2 rounded-full mb-6" style={{ backgroundColor: "rgba(42, 143, 168, 0.15)" }}>
             <span className="text-sm font-medium" style={{ color: "#1A2B4A" }}>Serviços</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#212529" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#212529" }}>
             Tratamento neurológico completo em São Paulo
           </h2>
 
@@ -44,7 +44,7 @@ export default function Services() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
