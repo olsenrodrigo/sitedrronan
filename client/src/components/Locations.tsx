@@ -87,7 +87,7 @@ export default function Locations() {
                   <p style={{ color: "#3C3C3C" }}>
                     Av. Marquês de São Vicente, 2219 — Conj. 316<br />
                     Jardim das Perdizes — São Paulo/SP<br />
-                    CEP: 05065-000
+                    CEP: 05036-040
                   </p>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export default function Locations() {
             style={{ borderColor: "rgba(42, 143, 168, 0.15)", position: "relative", minHeight: "480px" }}
           >
             <iframe
-              src="https://maps.google.com/maps?q=EMNH+Instituto+de+Medicina+Av+Marques+de+Sao+Vicente+2219+Sao+Paulo&output=embed&z=16&hl=pt-BR"
+              src="https://maps.google.com/maps?q=Av+Marques+de+Sao+Vicente+2219+05036-040+Sao+Paulo&output=embed&z=16&hl=pt-BR"
               style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0, display: "block" }}
               allowFullScreen
               loading="lazy"
