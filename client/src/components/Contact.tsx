@@ -73,7 +73,7 @@ export default function Contact() {
                   <p className="text-sm" style={{ color: "#3C3C3C" }}>
                     Av. Marquês de São Vicente, 2219 — Conj. 316<br />
                     Jardim das Perdizes — São Paulo/SP<br />
-                    CEP: 05065-000
+                    CEP: 05036-040
                   </p>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                 <div>
                   <p className="font-bold mb-1" style={{ color: "#212529" }}>E-mail</p>
                   <p className="text-sm" style={{ color: "#3C3C3C" }}>
-                    contato@emnhinstituto.com.br
+                    agendamento@emnhinstituto.com.br
                   </p>
                 </div>
               </div>
