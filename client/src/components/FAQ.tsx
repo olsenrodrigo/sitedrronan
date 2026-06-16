@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 /*
  * WHITELABEL: Personalizar
@@ -8,6 +9,59 @@ import { Star, Quote } from "lucide-react";
  * - Endereco do consultorio
  * - Cores: #2A8FA8 (primary), #1A2B4A (secondary), #F0F6FA (muted)
  */
+
+const faqItems = [
+  {
+    q: "O Dr. Ronan Vieira trata AVC em crianças?",
+    a: "Sim. O Dr. Ronan Vieira Neto é especialista em AVC em crianças, sendo um dos poucos neuropediatras em São Paulo com fellowship internacional voltado para neurologia vascular pediátrica. Ele realiza diagnóstico precoce e orienta o tratamento e reabilitação após AVC infantil."
+  },
+  {
+    q: "Qual a diferença entre AVC em adultos, AVC em jovens e AVC em crianças?",
+    a: "O AVC em adultos costuma estar associado a hipertensão e diabetes. O AVC em jovens (18–45 anos) tem causas distintas como cardiopatias, trombofilias e anticoncepcional. Já o AVC em crianças é raro, porém grave, podendo ser causado por doenças cardíacas, infecções ou alterações de coagulação. O Dr. Ronan atende as três populações com abordagem individualizada."
+  },
+  {
+    q: "Onde fica o consultório do Dr. Ronan Vieira em São Paulo?",
+    a: "Av. Marquês de São Vicente, 2219, Conj. 316 — Jardim das Perdizes, São Paulo/SP, próximo à Barra Funda. Atende presencialmente e por teleconsulta."
+  },
+  {
+    q: "Quais doenças neurológicas o Dr. Ronan trata em São Paulo?",
+    a: "Diagnóstico e tratamento de AVC em adultos, jovens e crianças; epilepsia; enxaqueca e cefaleia; autismo (TEA); TDAH; atraso de fala; Síndrome de Guillain-Barré; e outras doenças do sistema nervoso central e periférico."
+  },
+  {
+    q: "Qual é a formação do Dr. Ronan Vieira Neto?",
+    a: "Graduação pela USP, residência em Neurologia pela UNICAMP e fellowship em Neuropediatria no Hospital for Sick Children (Toronto, Canadá) — um dos maiores centros de neurologia pediátrica do mundo."
+  },
+  {
+    q: "O consultório atende por plano de saúde?",
+    a: "O atendimento é particular, garantindo consultas completas e avaliação individualizada. Teleconsulta disponível para pacientes de outras cidades."
+  },
+];
+
+function FAQAccordion() {
+  const [open, setOpen] = useState<number | null>(null);
+  return (
+    <div className="max-w-3xl mx-auto space-y-3">
+      {faqItems.map((item, i) => (
+        <div key={i} className="rounded-xl border overflow-hidden" style={{ borderColor: "rgba(91,140,155,0.2)" }}>
+          <button
+            className="w-full text-left px-6 py-4 flex justify-between items-center font-medium text-sm gap-4 cursor-pointer hover:opacity-80 transition-opacity"
+            style={{ color: "#1A2B4A", backgroundColor: "#fff" }}
+            onClick={() => setOpen(open === i ? null : i)}
+            aria-expanded={open === i}
+          >
+            <span>{item.q}</span>
+            <ChevronDown size={18} className={`shrink-0 transition-transform ${open === i ? "rotate-180" : ""}`} style={{ color: "#2A8FA8" }} />
+          </button>
+          {open === i && (
+            <div className="px-6 py-4 text-sm leading-relaxed border-t" style={{ color: "#3C3C3C", borderColor: "rgba(91,140,155,0.15)", backgroundColor: "#F7FBFD" }}>
+              {item.a}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function FAQ() {
   const testimonials = [
@@ -31,6 +85,35 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-14" style={{ backgroundColor: "#F0F6FA" }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Bloco FAQ */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-8"
+        >
+          <div className="inline-block px-4 py-2 rounded-full mb-4" style={{ backgroundColor: "rgba(91, 140, 155, 0.15)" }}>
+            <span className="text-sm font-medium" style={{ color: "#1A2B4A" }}>Perguntas Frequentes</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: "#212529" }}>
+            Dúvidas sobre neurologia e neuropediatria em São Paulo
+          </h2>
+          <p className="text-base max-w-2xl mx-auto mb-8" style={{ color: "#3C3C3C" }}>
+            AVC em adultos, jovens e crianças — neuropediatra no Jardim das Perdizes e Barra Funda
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <FAQAccordion />
+        </motion.div>
+
+        {/* Depoimentos */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

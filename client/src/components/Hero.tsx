@@ -27,6 +27,14 @@ export default function Hero({ scrollToSection }: HeroProps) {
           className="absolute inset-0"
           style={{ background: "linear-gradient(to right, rgba(13, 27, 42, 0.97), rgba(26, 43, 74, 0.75), rgba(26, 43, 74, 0.25))" }}
         />
+        {/* Marca d'água do logo */}
+        <img
+          src="/logo-ronan-white.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute right-[-2%] top-1/2 -translate-y-1/2 w-[50%] max-w-xl pointer-events-none select-none"
+          style={{ opacity: 0.09 }}
+        />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6">
