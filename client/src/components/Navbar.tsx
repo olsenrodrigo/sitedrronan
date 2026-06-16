@@ -65,9 +65,11 @@ export default function Navbar({ activeSection = "hero", scrollToSection }: Navb
             className="flex items-center cursor-pointer"
             onClick={() => handleNav("hero")}
           >
-            <span className="text-xl font-bold" style={{ color: "#1A2B4A" }}>
-              Dr.<span style={{ color: "#2A8FA8" }}> Ronan Vieira</span>
-            </span>
+            <img
+              src="/logo-ronan.png"
+              alt="Dr. Ronan Vieira Neto — Neurologia e Neuropediatria"
+              className="h-14 w-auto object-contain"
+            />
           </motion.div>
 
           <nav className="hidden lg:flex items-center space-x-5">
