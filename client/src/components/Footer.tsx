@@ -82,6 +82,12 @@ export default function Footer() {
             {/* WHITELABEL: Copyright */}
             &copy; Dr. Ronan J. Vieira Neto – Todos os direitos reservados.
           </p>
+          <p className="text-base mt-2" style={{ color: "#EDF2F4" }}>
+            VIEIRA - SANDY SERVICOS MEDICOS LTDA
+          </p>
+          <p className="text-base font-bold mt-1" style={{ color: "#EDF2F4" }}>
+            CNPJ: 43.094.686/0001-30
+          </p>
         </div>
       </div>
     </footer>
